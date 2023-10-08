@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classExercises JavaScript</title>
+</head>
+<body>
+    <p>
+        Q.1 = You are provided with two numbers A and B. Your task is to add these two numbers.
+        Example : 5, 2; 
+    </p>
+    <script>
+        var a = 5;
+        var b = 2;
+        var sum = a+b;
+        console.log("Total Number Of Sum Is : ",sum);
+        document.write("Total Number Of Sum Is : ", sum);
+    </script>
+
+    <p>
+        Q.2 = You are given two number first as A� and second as B� and check if both conditions
+                (A<10�<10 and A>B�>�) are satisfied or not with the help of operators.<br>
+                Example; c=5, d=3 : (c > d ) ; 
+    </p>
+    <script>
+        var c = 5;
+        var d = 3;
+        if ( c > d) {
+            console.log("Conditions are satisfied ",Boolean(true));
+            document.write("Conditions are satisfied ",Boolean(true));
+        }else{
+            console.log("Conditions are Not satisfied ", Boolean(false));
+            document.write("Conditions are Not satisfied ", Boolean(false));
+
+        }
+    </script>
+
+    <p>
+        Q.3 = You are given two numbers A=12 and B=20. You need to do the following checks:
+                1. if both are divisible by 10 console true.
+                2. if both are not divisible by 10 console false.
+                3. if one of them only is divisible by 10 console true.
+                Use operator to do this.
+                Example : 12 ,20 ;
+    </p>
+    <script>
+        const e = 12;
+        const f = 20;
+        if (e%10==0 || f%10 == 0 ) {
+            console.log("Conditions are satisfied ",Boolean(true));
+            document.write("Conditions are satisfied ",Boolean(true));
+
+        } else if (e%10 != 0 || f%10 != 0  ) {
+            document.write("Conditions are Not satisfied ",Boolean(false));
+            console.log("Conditions are NOt satisfied ",Boolean(false));
+        }else{
+            console.log("Conditions are satisfied ",Boolean(true));
+            document.write("Conditions are satisfied ",Boolean(true));
+
+        }
+    </script>
+
+    <p>Q4. You are provided a four digit number N only. Your task is to print out the first digit of that
+        number.
+        Example: 4567</p>
+    <p id="num"></p>
+    <script>
+        let number = 4567;
+        let number1 = String(number)[0];
+        console.log(number1);
+        console.log(typeof number1);
+
+        let number2 = Number(number1);
+        console.log(number2);
+        console.log(typeof number2);
+        document.getElementById("num").innerHTML = ("The First Digit Of That Number : " + number2 );
+    </script>
+
+    <p>
+       Q5. You are provided a four digit number N only. Your task is to print out the last digit of that
+        number Example:4567 
+    </p>
+    <script>
+        let num = 4567;
+        let num1 = String(num)[3];
+        let num2 = Number(num1);
+        console.log(num1);
+        console.log(typeof number1);
+
+        console.log(num2);
+        console.log(typeof num2);
+        document.write( "The Last Digit Of That Number : " + num2)
+    </script>
+
+    <p>
+        Q.6 You are provided with two numbers A� and B� where A� as divisor and B� as dividend.Your
+        task is find the remainder. g=2 , h=9 ;
+    </p>
+    <p id="rem"></p>
+    <script>
+        let g = 2;
+        let h = 9;
+        let remainder = (h%g);
+        document.getElementById("rem").innerHTML =("The Remaining Value is : " + remainder);
+
+        // let g = 2;
+        // let h = 101;
+        // let remain = 0;
+        // function inc() {
+        //     if (h%g == 1) {
+        //         remain = h%g;
+        //         return remain;
+        //     }else{
+        //         console.log("Pls Input The cureet value");
+        //         return remain;
+        //     }
+        // }
+        // console.log(typeof remain);
+        // document.getElementById("rem").innerHTML = " The Remaining Value is : " + inc();
+        // document.write( typeof inc());
+    </script>
+
+    <p>
+        Q7. You are provided with two numbers A� and B�. Your task is to multiply these two numbers
+        Example : a:2 B:5
+    </p>
+
+    <script>
+        var i = 2;
+        var j = 5;
+        // var z = i*j;
+        multi = (z) =>  {
+            z = i*j; 
+            return z;
+        }
+        document.write(" The Ans is : " + multi());
+        console.log(multi());
+    </script>
+
+    <p>
+        Q8. Shyam has got his marks in three subjects as A�, B�, and C� (out of 100).Write a program to
+            calculate his total marks and his average. Example a=50, b=20, c=100;
+    </p>
+    <script>
+        var p = 50;
+        var m = 20;
+        var s = 100;
+        sum = () =>{
+            tsum = (p+m+s);
+            avg = (tsum/3);
+            return {tsum, avg};
+        }
+        console.log(sum());
+        document.write(" Total Marks : " +sum().tsum +"<br><br>" + "Average of Total Marks : " + sum().avg );
+    </script>
+    <script>
+        let arr = [1,2,3,4,5];
+        let obj = {...arr};
+
+        console.log(obj);
+    </script>
+    <h2>Square pattern in javascript</h2>
+    <script>
+        let n = 5;
+        let string = "";
+        for(let i=0; i<n; i++){
+            for(let j=0; j<n; j++){
+                string+="*";
+            }
+            string+="<br>\n";
+        }
+        console.log(string);
+        document.write(string);
+
+    </script>
+    <h2>Number Patterns UP</h2>
+    <script>
+        let q = 6
+        let pattern = "";
+        for(let i=1; i<=q; i++){
+            for(let j=1; j<=i; j++){
+                pattern += j + " * ";
+            }
+            pattern+="<br>\n"
+        }
+        console.log(pattern);
+        document.write(pattern);
+    </script>
+    <br><br>
+    <h2>Number Patterns Down</h2>
+    <script>
+        let q2 = 6;
+        let pattern2 = "";
+        for(let i=1; i<=q2; i++){
+            for(let j=i; j<=q2; j++){
+                pattern2 += j;
+            }
+            pattern2+="<br>\n"
+        }
+        console.log(pattern2);
+        document.write(pattern2);
+    </script>
+<h2>Number Patterns Up side down</h2>
+    <script>
+        let q1 = 6
+        let pattern1 = "";
+        for(let i=1; i<=q1; i++){
+            for(let j=i; j<=q1; j++){
+                pattern+=j + " * ";
+            }
+            pattern+="<br>\n ";
+        }
+        console.log(pattern);
+        document.write(pattern);
+    </script>
+    <h2>Number Patterns UP</h2>
+    <script>
+        let q3 = 6;
+        let pattern4 = "";
+        for(let i=1; i<=q3; i++){
+            for(let j=1; j<=i; j++){
+                pattern4 += j + " * ";
+                break;
+            }
+            pattern+="<br>\n"
+        }
+        console.log(pattern4);
+        document.write(pattern4);
+    </script>
+</body>
+</html>
